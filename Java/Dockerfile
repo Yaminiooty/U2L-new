@@ -11,6 +11,7 @@ RUN export PATH=${PATH}:/opt/rh/rh-perl530/root/usr/bin/&& \
      cpanm --notest -l extlib Module::CoreList && \
      cpanm --notest -l extlib --installdeps .
 RUN yum install java-1.8.0-openjdk-devel
+RUN java -version
 RUN yum install Dos2unix
 RUN yum install Dos2unix
 Run yum install ksh
