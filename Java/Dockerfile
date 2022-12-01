@@ -2,6 +2,7 @@
 
 FROM quay.io/centos7/perl-530-centos7
 ARG PJHOME
+ARG SRC_PATH
 
 
 
@@ -20,6 +21,17 @@ Run yum install ksh -y
 ENV PJHOME $PJHOME
 ENV APNAME javaanalysis
 
-COPY . /usr/U2L
+
+# COPY . /usr/U2L
 WORKDIR /usr/U2L
 CMD ["U2LTool_Install.sh", $PJHOME, $APNAME ]
+
+RUN cd $PJHOME
+RUN cd ./work/javaanalysis/
+
+RUN cp -R $SRC_PATH .
+
+RUN cd $PJHOME
+RUN cd ..
+
+CMD ["U2LTool_Analysis.sh", $PJHOME, $APNAME ]
