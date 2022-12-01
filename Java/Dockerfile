@@ -5,7 +5,7 @@ FROM quay.io/centos7/perl-530-centos7
 
 
 # Install the dependencies
-RUN RUN sudo su
+RUN sudo su
 RUN export PATH=${PATH}:/opt/rh/rh-perl530/root/usr/bin/&& \
      export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/rh/rh-perl530/root/usr/lib64 && \
      cpanm --notest -l extlib Module::CoreList && \
