@@ -1,6 +1,7 @@
 # Dockerfile
 
 FROM quay.io/centos7/perl-530-centos7
+ARG PJHOME
 
 
 
@@ -21,4 +22,4 @@ ENV APNAME javaanalysis
 
 COPY . /usr/U2L
 WORKDIR /usr/U2L
-CMD ["U2LTool_Install.sh", $PJHOME, "javaanalysis" ]
+CMD ["U2LTool_Install.sh", $PJHOME, $APNAME ]
