@@ -15,7 +15,7 @@ RUN export PATH=${PATH}:/opt/rh/rh-perl530/root/usr/bin/&& \
 RUN yum install java-1.8.0-openjdk-devel -y
 RUN java -version
 RUN yum install dos2unix -y
-Run yum install ksh -y
+RUN yum install ksh -y
 
 
 ENV PJHOME $PJHOME
