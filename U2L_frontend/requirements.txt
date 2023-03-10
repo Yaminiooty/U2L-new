@@ -1,0 +1,6 @@
+node
+react
+grommet
+grommet-icons
+prop-types
+styled-component

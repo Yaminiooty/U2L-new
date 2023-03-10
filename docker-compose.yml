@@ -22,4 +22,10 @@ services:
             context: ./u2l_backend
         ports:
             - 8084:80
+    u2l_frontend:
+        build:
+            context: ./U2L_frontend
+        ports:
+            - 3000:80
+             
              
